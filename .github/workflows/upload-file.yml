@@ -1,5 +1,4 @@
 name: upload file
-run-name: ${{ github.actor }} : testing GitHub Actions for upload file
 on: [push]
 jobs:
   Explore-GitHub-Actions:
