@@ -1,15 +1,18 @@
 name: upload file
+run-name: ${{ github.actor }} : testing GitHub Actions for upload file
+on: [push]
 jobs:
-  upload_to_drive:
-      runs-on: ubuntu-latest
-      steps:
-        - uses: actions/checkout@v2
-        - name: Copy files via SSH
-          uses: appleboy/scp-action@master
-          with:
-            host: "37.152.177.133"
-            username: "ubuntu"
-            password: "HRlYPxCPkF!"
-            port: "22"
-            source: README.md
-            target: "~"
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v4
+      - name: Copy files via SSH
+        uses: appleboy/scp-action@master
+        with:
+          host: "37.152.177.133"
+          username: "ubuntu"
+          password: "HRlYPxCPkF!"
+          port: "22"
+          source: README.md
+          target: "~"
